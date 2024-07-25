@@ -2,7 +2,13 @@
 pragma solidity ^0.8.19;
 
 import {ERC20} from "lib/openzeppelin-contracts/contracts/token/ERC20/ERC20.sol";
+
+// 
+
 import {ERC20Votes} from "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/ERC20Votes.sol";
+
+// This ERC20Votes allows approvals to be made via signatures. Basically, you can sign a transaction without sending it
+// and let somebody else send the transaction
 import {ERC20Permit} from "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/draft-ERC20Permit.sol";
 
 contract GovToken is ERC20, ERC20Permit, ERC20Votes {
