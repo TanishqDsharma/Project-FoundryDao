@@ -9,8 +9,6 @@ contract Box is Ownable {
 
     event NumberChanged(uint256 number);
 
-    constructor() Ownable(msg.sender){}
-
     // This function is only callable by the DAO
     function store(uint256 newNumber) public onlyOwner{
         s_number = newNumber;
